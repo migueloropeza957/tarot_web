@@ -8,13 +8,24 @@
 <meta content="Consultas gratis, Adivina tu futuro, Lectura del tarot, Interpretación de cartas, Arcanos mayores, Arcanos menores, Tarot online, Tarotista, Guia espiritual, Amor, trabajo, dinero, finanzas, salud, hijos, matrimonio" name="keywords"/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Open+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <style>
+
+/* ==== POSICIONA EL BOTÓN ARRIBA A LA DERECHA ==== */
+.tarot-cards-section {
+  position: relative;
+  padding-top: 70px; /* Aumenta el espacio superior */
+}
+#startReadingButton {
+  display: block;
+  margin: 25px auto 30px auto;
+}
+
         :root {
             --primary-color: #704214; /* Un tono de púrpura místico */
-            --secondary-color: #F5DEB3; /* Un lila suave */
+            --secondary-color: #F5DEB3; /* Un lila suave #F5DEB3 */
             --accent-color: #F7DC6F; /* Un dorado brillante para acentos */
             --text-dark: #333;
             --text-light: #f4f4f4;
-            --bg-light: #EFEBE0; /* Un crema suave para el fondo */
+            --bg-light: #EFEBE0; /* Crema para el fondo */
             --card-back-color: #704214; /* Un púrpura oscuro para el reverso de las cartas */
             --card-border-color: #AF7AC5; /* Borde más claro para las cartas */
             --dark-bg-category: #222; /* Fondo oscuro para la nueva sección */
@@ -48,7 +59,8 @@
             margin-bottom: 0.5rem;
             letter-spacing: 2px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+        
+    color: var(--accent-color);}
 
         header p {
             font-size: 1.2rem;
@@ -248,10 +260,10 @@
         }
 
         .position-box .revealed-card-wrapper img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 3px;
+            	 width: 100%;
+    		 height: 100%;
+    		 object-fit: contain;
+   		 border-radius: 3px;
         }
 
         .position-box .card-name-display {
@@ -726,16 +738,16 @@
 <main>
 <section class="hero-section container">
 <h2>Descubre tu Destino con <span style="color: var(--primary-color);">Lecturas de Tarot Online</span></h2>
-<p>En **Mut, la Hechicera del Tarot**, te ofrecemos **consultas gratis** para desvelar los secretos que las cartas tienen para ti. Explora los **Arcanos Mayores** y obtén una profunda **interpretación de cartas** para tu **amor, trabajo, dinero, finanzas, salud, hijos y matrimonio**. ¡Tu **guía espiritual** te espera!</p>
+<p>En  Mut, la Hechicera del Tarot , te ofrecemos  consultas gratis  para desvelar los secretos que las cartas tienen para ti. Explora los  Arcanos Mayores  y obtén una profunda  interpretación de cartas  para tu  amor, trabajo, dinero, finanzas, salud, hijos y matrimonio . ¡Tu  guía espiritual  te espera!</p>
 <a class="cta-button" href="#tarot-cards-section">¡Comienza Tu Lectura Gratis!</a>
 </section>
 <hr/>
 <section class="tarot-cards-section container" id="tarot-cards-section">
 <h2>Selecciona tus Cartas del Tarot</h2>
-<p>Elige **10 cartas** del mazo para tu lectura de la Cruz Celta. Cada elección te acercará a la **adivinación de tu futuro**.</p>
+<p>Elige  10 cartas  del mazo para tu lectura de la Cruz Celta. Cada elección te acercará a la  adivinación de tu futuro .</p>
+<button class="cta-button" id="startReadingButton" style="display: none;">Interpretar Mi Lectura</button>
 <div class="card-grid" id="cardGrid">
 </div>
-<button class="cta-button" id="startReadingButton" style="margin-top: 2rem; display: none;">Interpretar Mi Lectura</button>
 <p id="selectionMessage" style="margin-top: 1rem; font-size: 1.1em; color: var(--primary-color);">Selecciona 10 cartas...</p>
 </section>
 <hr/>
@@ -796,9 +808,10 @@
 <div class="card-interpretations" id="cardInterpretations">
 <h3>Interpretación Carta por Carta</h3>
 </div>
+<img src="img/imagen7.jpg" alt="Interpretación global" style="display:block; margin: 0 auto 35px auto; max-width:600px; width:100%; border-radius:16px;">
 <div class="global-interpretation" id="globalInterpretation">
 <h3>Interpretación Global de Tu Lectura</h3>
-<p>Aquí se mostrará la síntesis de todas las cartas, ofreciendo una visión completa sobre tu situación actual y tu camino futuro. Esta interpretación será un resumen coherente y profundo de tu lectura, abarcando las áreas de **amor, trabajo, dinero, finanzas, salud, hijos y matrimonio** según lo indicado por las cartas.</p>
+<p>Aquí se mostrará la síntesis de todas las cartas, ofreciendo una visión completa sobre tu situación actual y tu camino futuro. Esta interpretación será un resumen coherente y profundo de tu lectura, abarcando las áreas de  amor, trabajo, dinero, finanzas, salud, hijos y matrimonio  según lo indicado por las cartas.</p>
 </div>
 </section>
 <hr/>
@@ -836,7 +849,7 @@
         <p>¡Nos encantaría escuchar de ti! Si tienes alguna pregunta, comentario o necesitas ayuda, por favor contáctanos.</p>
         <div class="contact-info">
             <p><strong>Email:</strong> muttarotev@gmail.com</p>
-            <p><strong>Teléfono:</strong> +34 643 12 99 80 </p>
+            <p><strong>Teléfono:</strong> +34 643 12 99 80   -  WhatsApp </p>
             <p><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00 (CET)</p>
         </div>
         </section>
@@ -1135,7 +1148,7 @@ const arcanaExamplesPos1 = { 
             const cards = [];
             const majorArcana = [
                 "El Mago", "La Papisa", "La Emperatriz", "El Emperador", "El Sumo Sacerdote",
-                "Los Enamorados", "El Carro", "La Justicia", "El Ermitaño", "La Rueda de la Fortuna",
+                "Los Enamorados", "El Carro", "La Justicia", "El Ermitaño", "La Rueda",
                 "La Fuerza", "El Colgado", "La Muerte", "La Templanza", "El Diablo",
                 "La Torre", "La Estrella", "La Luna", "El Sol", "El Juicio", "El Mundo", "El Loco"
             ];
@@ -1150,7 +1163,7 @@ const fileExtensionMap = {
     "EL_CARRO": "jpg",
     "LA_JUSTICIA": "jpg",
     "EL_ERMITANO": "jpg",
-    "LA_RUEDA": "jpg",  // OJO: revisa si tu archivo tiene "DE" o no
+    "LA_RUEDA": "jpg",
     "LA_FUERZA": "jpg",
     "EL_COLGADO": "jpg",
     "LA_MUERTE": "jpg",
@@ -1291,7 +1304,7 @@ const fileExtensionMap = {
                 case "Los Enamorados": return "la necesidad de tomar decisiones importantes relacionadas con tus hijos, o la invitación a encontrar un equilibrio más profundo y significativo en la dinámica familiar. Escucha a tu corazón.";
                 case "El Ermitaño": return "te sugiere que es momento de dar espacio a tus hijos para su propio crecimiento y autonomía. También puede indicar un período de reflexión personal sobre tu rol como padre o madre.";
                 case "El Juicio": return "un momento de despertar o una nueva etapa significativa que se inicia en la vida de tus hijos, o en tu relación con ellos. Podría ser un momento de importantes revelaciones y entendimientos mutuos.";
-                default: return `tendencias que impactan la relación con tus hijos. La energía de **${name}** te invita a reflexionar sobre...`;
+                default: return `tendencias que impactan la relación con tus hijos. La energía de  ${name}  te invita a reflexionar sobre...`;
             }
         }
 
@@ -1303,7 +1316,7 @@ const fileExtensionMap = {
                 case "El Sol": return "felicidad radiante, una comprensión mutua excepcional y un futuro lleno de luz y éxito para tu matrimonio. Es un momento de gran alegría y celebración compartida.";
                 case "La Justicia": return "la imperante necesidad de equidad, verdad y equilibrio en tu relación. Te invita a resolver cualquier desacuerdo con imparcialidad y a buscar la armonía a través de la honestidad.";
                 case "La Torre": return "una posible ruptura inesperada, una revelación que sacude los cimientos del matrimonio, o un cambio radical que, aunque difícil, es necesario para la evolución de la relación. Puede ser un punto de inflexión.";
-                default: return `aspectos importantes que conciernen a tu matrimonio o relación de pareja. La carta de **${name}** te insta a considerar...`;
+                default: return `aspectos importantes que conciernen a tu matrimonio o relación de pareja. La carta de  ${name}  te insta a considerar...`;
             }
         }
 
@@ -1314,7 +1327,7 @@ const fileExtensionMap = {
                 case "La Torre": return "una revelación impactante sobre una infidelidad, o la destrucción repentina de la confianza en una relación. Es un momento de crisis que, aunque doloroso, abre la puerta a la verdad.";
                 case "La Papisa": return "secretos por descubrir o información que permanece oculta. Te aconseja confiar en tu intuición y en tu percepción para desvelar lo que no se ve claramente en la superficie.";
                 case "Los Enamorados": return "dilemas morales o elecciones difíciles en una relación que podrían llevar a caminos separados o a la aparición de tentaciones. Es un momento de honestidad y decisión.";
-                default: return `elementos en tu relación que podrían requerir atención en términos de confianza y honestidad. La carta de **${name}** te insta a ser consciente de... (Recuerda que el tarot no da un sí/no directo a la infidelidad, sino que te guía a explorar las dinámicas de tu relación.)`;
+                default: return `elementos en tu relación que podrían requerir atención en términos de confianza y honestidad. La carta de  ${name}  te insta a ser consciente de... (Recuerda que el tarot no da un sí/no directo a la infidelidad, sino que te guía a explorar las dinámicas de tu relación.)`;
             }
         }
 
@@ -1326,7 +1339,7 @@ const fileExtensionMap = {
                 case "La Rueda de la Fortuna": return "cambios inesperados en tus planes de viaje, o un viaje que se convierte en un giro del destino. Prepárate para lo imprevisto y confía en que estos cambios te llevarán a un buen lugar.";
                 case "El Ermitaño": return "un viaje de introspección profunda, un retiro personal o la necesidad de viajar solo para encontrar respuestas internas y conectar contigo mismo. Es un viaje de autodescubrimiento.";
                 case "La Estrella": return "viajes inspiradores, llenos de esperanza y renovación. Un viaje que te traerá sanación, nuevas perspectivas y te conectará con tu propósito. Es un augurio muy positivo para tus desplazamientos.";
-                default: return `posibles escenarios en tus planes de viaje. La energía de **${name}** podría indicar...`;
+                default: return `posibles escenarios en tus planes de viaje. La energía de  ${name}  podría indicar...`;
             }
         }
 
@@ -1357,7 +1370,8 @@ const fileExtensionMap = {
                             cardElement.classList.add('selected');
                             selectedCardIds.push(cardData.id);
                         } else {
-                            alert('Ya has seleccionado 10 cartas. Deselecciona una para elegir otra.');
+                             showModal('Ya has seleccionado 10 cartas. Deselecciona una para elegir otra.');
+                             return;
                         }
                     } else {
                         cardElement.classList.remove('selected');
@@ -1447,20 +1461,20 @@ const fileExtensionMap = {
             const hopesFearsCard = assignedCardsData.pos9;
             const resultCard = assignedCardsData.pos10;
 
-            globalText += `En el **presente**, la carta de **${presentCard.name}** indica que ${presentCard.interpretation.general}.<br>`;
-            globalText += `El principal **obstáculo** a superar es **${obstacleCard.name}**, sugiriendo que ${obstacleCard.interpretation.general.toLowerCase()}.<br>`;
-            globalText += `Tus **raíces** y fundamentos más profundos se asientan en la energía de **${rootsCard.name}**, que significa que ${rootsCard.interpretation.general.toLowerCase()}.<br><br>`;
+            globalText += `En el  presente , la carta de  ${presentCard.name}  indica que ${presentCard.interpretation.general}.<br>`;
+            globalText += `El principal  obstáculo  a superar es  ${obstacleCard.name} , sugiriendo que ${obstacleCard.interpretation.general.toLowerCase()}.<br>`;
+            globalText += `Tus  raíces  y fundamentos más profundos se asientan en la energía de  ${rootsCard.name} , que significa que ${rootsCard.interpretation.general.toLowerCase()}.<br><br>`;
 
-            globalText += `Mirando el **pasado**, la influencia de **${pastCard.name}** ha marcado tu camino, indicando que ${pastCard.interpretation.general.toLowerCase()}.<br>`;
-            globalText += `Tu **futuro próximo** se ve influenciado por **${futureProxCard.name}**, anticipando que ${futureProxCard.interpretation.general.toLowerCase()}.<br>`;
-            globalText += `Y tu **futuro inmediato** trae consigo la potente energía de **${futureImmedCard.name}**, augurando que ${futureImmedCard.interpretation.general.toLowerCase()}.<br><br>`;
+            globalText += `Mirando el  pasado , la influencia de  ${pastCard.name}  ha marcado tu camino, indicando que ${pastCard.interpretation.general.toLowerCase()}.<br>`;
+            globalText += `Tu  futuro próximo  se ve influenciado por  ${futureProxCard.name} , anticipando que ${futureProxCard.interpretation.general.toLowerCase()}.<br>`;
+            globalText += `Y tu  futuro inmediato  trae consigo la potente energía de  ${futureImmedCard.name} , augurando que ${futureImmedCard.interpretation.general.toLowerCase()}.<br><br>`;
 
-            globalText += `Tu **actitud** frente a esta situación es la que refleja **${attitudeCard.name}**, demostrando que ${attitudeCard.interpretation.general.toLowerCase()}.<br>`;
-            globalText += `El **entorno** que te rodea se alinea con **${environmentCard.name}**, lo que sugiere que ${environmentCard.interpretation.general.toLowerCase()}.<br>`;
-            globalText += `Tus **esperanzas y miedos** giran en torno a la energía de **${hopesFearsCard.name}**, que indica que ${hopesFearsCard.interpretation.general.toLowerCase()}.<br><br>`;
-            globalText += `Finalmente, el **resultado** de esta situación, tal como lo desvela **${resultCard.name}**, culminará en que ${resultCard.interpretation.general.toLowerCase()}.<br><br>`;
+            globalText += `Tu  actitud  frente a esta situación es la que refleja  ${attitudeCard.name} , demostrando que ${attitudeCard.interpretation.general.toLowerCase()}.<br>`;
+            globalText += `El  entorno  que te rodea se alinea con  ${environmentCard.name} , lo que sugiere que ${environmentCard.interpretation.general.toLowerCase()}.<br>`;
+            globalText += `Tus  esperanzas y miedos  giran en torno a la energía de  ${hopesFearsCard.name} , que indica que ${hopesFearsCard.interpretation.general.toLowerCase()}.<br><br>`;
+            globalText += `Finalmente, el  resultado  de esta situación, tal como lo desvela  ${resultCard.name} , culminará en que ${resultCard.interpretation.general.toLowerCase()}.<br><br>`;
 
-            globalText += `Recuerda que el **tarot online** es una **guía espiritual**; la **adivinación de tu futuro** es una herramienta para empoderarte y tomar decisiones conscientes. Para una **interpretación de cartas** más profunda y personalizada de la mano de una **tarotista** experta, te animamos a explorar nuestras sesiones privadas.`;
+            globalText += `Recuerda que el  tarot online  es una  guía espiritual ; la  adivinación de tu futuro  es una herramienta para empoderarte y tomar decisiones conscientes. Para una  interpretación de cartas  más profunda y personalizada de la mano de una  tarotista  experta, te animamos a explorar nuestras sesiones privadas.`;
 
             return globalText;
         }
@@ -1497,10 +1511,10 @@ const fileExtensionMap = {
             for (const posId in assignedCardsData) {
                 const card = assignedCardsData[posId];
                 if (card.interpretation[category]) {
-                    categoryInterpretations[category].cards.push(`**${card.name}** en la posición "${celticCrossPositions.find(p => p.id === posId).name}" te indica: ${card.interpretation[category]}`);
+                    categoryInterpretations[category].cards.push(` ${card.name}  en la posición "${celticCrossPositions.find(p => p.id === posId).name}" te indica: ${card.interpretation[category]}`);
                 } else {
                     // Si no hay una interpretación específica para la categoría, usa la general
-                    categoryInterpretations[category].cards.push(`**${card.name}** en la posición "${celticCrossPositions.find(p => p.id === posId).name}" te indica: ${card.interpretation.general} (y esto se relaciona con ${category}).`);
+                    categoryInterpretations[category].cards.push(` ${card.name}  en la posición "${celticCrossPositions.find(p => p.id === posId).name}" te indica: ${card.interpretation.general} (y esto se relaciona con ${category}).`);
                 }
             }
 
@@ -1508,7 +1522,7 @@ const fileExtensionMap = {
             interpretation = categoryInterpretations[category].cards.join('<br><br>');
 
             if (category === 'infidelidad') {
-                interpretation += "<br><br>🚨 **Nota importante sobre la infidelidad:** El tarot puede señalar energías de secretos, engaño o crisis en la relación, pero recuerda que no ofrece una respuesta definitiva de 'sí' o 'no' a la infidelidad. Estas cartas son una guía para explorar las dinámicas de tu relación y fomentar la comunicación, la confianza y la introspección. La verdad final reside en tu propio discernimiento y en el diálogo abierto con tu pareja."
+                interpretation += "<br><br>🚨  Nota importante sobre la infidelidad:  El tarot puede señalar energías de secretos, engaño o crisis en la relación, pero recuerda que no ofrece una respuesta definitiva de 'sí' o 'no' a la infidelidad. Estas cartas son una guía para explorar las dinámicas de tu relación y fomentar la comunicación, la confianza y la introspección. La verdad final reside en tu propio discernimiento y en el diálogo abierto con tu pareja."
             }
 
 
@@ -1520,6 +1534,13 @@ const fileExtensionMap = {
             selectedCategoryInterpretation.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
+function showModal(msg) {
+    document.getElementById('modalMessage').innerText = msg;
+    document.getElementById('customModal').style.display = 'flex';
+}
+function closeModal() {
+    document.getElementById('customModal').style.display = 'none';
+}
 
         // Inicializar la página
         document.addEventListener('DOMContentLoaded', () => {
@@ -1527,6 +1548,72 @@ const fileExtensionMap = {
             // Ocultar la sección de categorías al cargar la página inicialmente
             categorySection.style.display = 'none';
         });
-    </script>
+    
+
+// Modal para hacer zoom en carta revelada
+document.body.addEventListener('click', function(e) {
+  // Si se clickea una carta revelada
+  if (e.target.classList.contains('revealed-card') && e.target.src) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    modalImg.src = e.target.src;
+    modal.style.display = 'flex';
+  }
+});
+
+// Cierra el modal si clickeas fuera de la imagen
+document.getElementById('imageModal').addEventListener('click', function(e){
+  if(e.target.id === 'imageModal') {
+    this.style.display = 'none';
+  }
+});
+
+
+// Cierra el modal si clickeas la X
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+  document.getElementById('imageModal').style.display = 'none';
+});
+
+
+// Cierra el modal si das clic a la imagen grande también
+document.getElementById('modalImg').addEventListener('click', function() {
+  document.getElementById('imageModal').style.display = 'none';
+});
+
+</script>
+
+
+
+<!-- Modal para imagen grande de la carta -->
+
+<!-- Modal para imagen grande de la carta -->
+<div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <span id="closeModalBtn" style="position:absolute;top:30px;right:35px;font-size:3rem;color:#fff;cursor:pointer;z-index:10001;">&times;</span>
+  <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 4px 20px #000;">
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Cierra el modal si clickeas la X
+  document.getElementById('closeModalBtn').addEventListener('click', function() {
+    document.getElementById('imageModal').style.display = 'none';
+  });
+
+  // Cierra el modal si das clic a la imagen grande también
+  document.getElementById('modalImg').addEventListener('click', function() {
+    document.getElementById('imageModal').style.display = 'none';
+  });
+
+  // Cierra el modal si clickeas fuera de la imagen o la X
+  document.getElementById('imageModal').addEventListener('click', function(e){
+    if(e.target.id === 'imageModal') {
+      this.style.display = 'none';
+    }
+  });
+});
+</script>
+
 </body>
 </html>
